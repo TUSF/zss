@@ -35,11 +35,11 @@ const Modules = struct {
 };
 
 fn getModules(b: *Build, optimize: OptimizeMode, target: ResolvedTarget) Modules {
-    const mach_freetype_dep = b.dependency("mach-freetype", .{
+    const mach_freetype_dep = b.dependency("mach_freetype", .{
         .optimize = optimize,
         .target = target,
     });
-    const mach_glfw_dep = b.dependency("mach-glfw", .{
+    const mach_glfw_dep = b.dependency("mach_glfw", .{
         .optimize = optimize,
         .target = target,
     });

@@ -1002,7 +1002,7 @@ const IFCLineSplitState = struct {
     fn popInlineBox(self: *IFCLineSplitState, index: Ifc.Size) void {
         assert(self.current_inline_box == index);
         if (index != 0) {
-            self.current_inline_box = self.inline_box_stack.pop();
+            self.current_inline_box = self.inline_box_stack.pop().?;
         } else {
             self.current_inline_box = undefined;
         }
